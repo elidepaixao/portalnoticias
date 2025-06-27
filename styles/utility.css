@@ -4,6 +4,7 @@
 
 }
 
+/*flow: mujda o fluxo do grid=> sai de uma linha abaixo da outra para se tornar colunas ao lado da outra*/
 .grid-flow-col {
   grid-auto-flow: column;
 }

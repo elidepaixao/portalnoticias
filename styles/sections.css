@@ -2,16 +2,28 @@
   img {
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-  }
+   
 
   .card {
+    border-radius: 4px;
     position: relative; 
-    &::before { 
-      content:""; 
-      position: absolute;           
+    over-flow: hidden; /*esconde o transbordamento da caixa*/
+    
+  }
+
+
+    &::before { /*&::before é p mesmo que .card::before*/
+      content:""; /*CRIANDO UM CONTEÚDO HTML COM CSS*/
+      position: absolute;          
       inset: 0;
-      background-color: white;
+
+      top: 50%;
+      /*função linear gradient*/
+      background: linear-gradient(
+        180deg,
+        transparent 0%,
+        #020617 100%
+      );
     }
   
 }

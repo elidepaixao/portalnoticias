@@ -1,17 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*faz os cálculos das caixas de borda a borda*/
 }
 
+/*1º: criação das variáveis paras as cores*/
+
 :root {
-  --brand-color-light: #60A5FA;
+  --brand-color-light: #60A5FA; /*nomes de origem do projeto no figma*/
   --brand-color-dark: #1D4ED8;
   --bg-color: #0F172A;
   --stroke-color: #1E293B;
   --text-color-primary: #F1F5F9;
   --text-color-secondary: #CBD5E1; 
 
+/*3º: definindo as fontes*/
 
   --font-family: 'Archivo', sans-serif;
   --h1: 800 24px/135% var(--font-family);
@@ -21,9 +24,10 @@
   --text-sm: 400 14px/160% var(--font);// Figma: text small - paragraph
 
 }
+/*2º: aplicando as cores e depois as fontes*/
 
 body {
-  
+  font: var(--text);
   color: var(--text-color-primary);
   background-color: var(--bg-color);
 
@@ -31,7 +35,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: inherit; /*herdando a cor do body*/
 }
 
 a:hover {
@@ -39,7 +43,7 @@ a:hover {
 }
 
 h1, h2, h3 {
-  font: inherit;
+  font: inherit; /*herda a fonte do pai: nesse caso o body(no html e css) para não ser aplicado o padrão do navegador*/
 }
 
 img {
