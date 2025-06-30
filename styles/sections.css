@@ -1,31 +1,46 @@
 #featured {
-  img {
+  img{
     height: 100%;
-    object-fit: cover;
-   
-
-  .card {
-    border-radius: 4px;
-    position: relative; 
-    over-flow: hidden; /*esconde o transbordamento da caixa*/
-    
+    object-fit: cover; /*evita que a iamgem estique*/
   }
 
 
-    &::before { /*&::before é p mesmo que .card::before*/
-      content:""; /*CRIANDO UM CONTEÚDO HTML COM CSS*/
-      position: absolute;          
-      inset: 0;
+.card {
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;  /*esconde o transbordamento da caixa*/
 
-      top: 50%;
-      /*função linear gradient*/
-      background: linear-gradient(
-        180deg,
-        transparent 0%,
-        #020617 100%
+
+   /*&::before é o mesmo que .card::before
+    content:""= CRIA UM CONTEÚDO HTML COM CS 
+    */
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%
+
+    background: linear-gradient( /*cria um gradiente na imagem*/
+      180deg,
+      transparent 0%,
+      #020617 100%
       );
-    }
-  
-}
+
+  }
+
+     figcaption{
+        position: absolute;
+        bottom: 0;
+
+        padding: 24px;
+
+         h2 {
+          margin-top: 8px;
+        }
+
+      }
+
+  }
 }
 
