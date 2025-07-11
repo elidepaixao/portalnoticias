@@ -1,3 +1,12 @@
+section header {
+  
+  border-top: 1px var(--stroke-color);
+  padding-block: 12px 24px;
+  font: var(--text-span);
+
+     
+}
+
 #featured {
   img{
     height: 100%;
@@ -47,4 +56,68 @@
 
   }
 }
+
+
+  #week {
+
+    margin-top: 80px;
+
+ 
+     header a {
+      
+      justify-self: end;
+      align-items: center;
+      gap: 8px;
+   
+
+    span {
+    background-image: url('../assets/icons/Vector.svg');
+
+    
+    
+    /* necessário Sempre que for usar background-image em um span, a, div ou qualquer outro elemento sem conteúdo */
+    display: inline-block; 
+    width: 16px;
+    height: 16px;
+   
+    }
+
+    &:hover span {
+      background-image: url('../assets/icons/ArrowRight-hover.svg');
+
+    }
+
+  }
+  
+  /*&>div - aplicando ao primeiro nível de div dentro do #week
+  292px: largura das imagens. poderia ser 1fr mas para ficar mais ajustado, determina-se o valor da largura*/
+  
+  &>div {
+    grid-template-columns: repeat(4, 292px);
+  }
+
+ 
+  img {
+    height: 160;
+     border-radius: 4px;
+  }
+
+  figure {
+    position: relative;
+
+    .content-tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+     
+    }
+
+    p {
+      font-weight: 800;
+      margin-top: 8px;
+    }
+  }
+}
+
+
 
