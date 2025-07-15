@@ -1,3 +1,5 @@
+(assets/images/imageReadme.png)
+
 # Portal de Notícias - Tech News
 
 ![Tech News Logo](assets/icons/Tech%20News.svg)
