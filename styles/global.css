@@ -21,6 +21,7 @@
   --h2: 800 16px/140% var(--font-family);
   --h3: 800 14px/140% var(--font-family);
   --text-span: 600 14px/145% var(--font-family);
+  --text: 400 16px/140% var(--font-family);
   --text-sm: 400 14px/160% var(--font);// Figma: text small - paragraph
 
 }
@@ -54,32 +55,38 @@ img {
   max-width: 1280px;
   padding-inline: 32px;
   margin-inline: auto;
+   
   
-  
-  main {
+}
+
+main {
     
-    margin-top: 40px;
+    margin-block: 40px;
+    row-gap: 80px;
+    column-gap: 32px; 
 
     /*gap: 80px para dar espaçamento superior entre as sections:  essa instrução não funcionou porque
      aplicou gap sem aplicar display: grid dentro de .container main.
-    Sem display: grid, o gap é ignorado.
+    Sem display: grid, o gap é ignorado. */
 
+   grid-template-columns: 2fr 1.5fr;
+   grid-template-areas:
 
-    */
+    "featured featured"
+    "week week"
+    "ai aside"
   }
 
-  .content-tag {
-    display: inline-block;
-    background-color: var(--brand-color-dark);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font: 500 10px/1.2 var(--font-family); /*peso / altura da linha/ tamanho fonte/var fonte*/
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-
-    /*Box-shadow: sombra da caixa. Posicionamentos:
-    sentido horário:  horizontal/ vertical/esfumaçado*/
-    box-shadow: 0px 4px 16px 
+.content-tag {
+  display: inline-block;
+  background-color: var(--brand-color-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+   font: 500 10px/1.2 var(--font-family); /*peso / altura da linha/ tamanho fonte/var fonte*/
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+   /*Box-shadow: sombra da caixa. Posicionamentos:
+   sentido horário:  horizontal/ vertical/esfumaçado*/
+  box-shadow: 0px 4px 16px 
   }
-}
     
