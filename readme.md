@@ -1,4 +1,4 @@
-(assets/images/imageReadme.png)
+![Layout do projeto](assets/images/imageReadme.png)
 
 # Portal de Notícias - Tech News
 
